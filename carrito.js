@@ -4,7 +4,8 @@ function saludar() {
 }
 saludar();
 
-let arrayDeProductosWoman = [{
+const  productos= [
+  {
     id: 1,
     nombre: 'purple',
     categoria: 'woman',
@@ -22,37 +23,128 @@ let arrayDeProductosWoman = [{
     categoria: 'woman',
     precio: 250
   },
-];
 
-let carro = [];
-
-let arrayDeProductosMen = [{
-  id: 1,
-  nombre: 'purple',
-  categoria: 'woman',
+{
+  id: 4,
+  nombre: 'black fire',
+  categoria: 'men',
   precio: 150
 },
 {
-  id: 2,
-  nombre: 'graffitti',
-  categoria: 'woman',
+  id: 5,
+  nombre: 'multi',
+  categoria: 'men',
   precio: 250
 },
 {
-  id: 3,
-  nombre: 'osiris',
-  categoria: 'woman',
+  id: 6,
+  nombre: 'nirvana',
+  categoria: 'men',
   precio: 250
 },
+{
+  id: 7,
+  nombre: 'black fire',
+  categoria: 'men',
+  precio: 150
+},
+{
+  id: 8,
+  nombre: 'multi',
+  categoria: 'men',
+  precio: 250
+},
+{
+  id: 9,
+  nombre: 'nirvana',
+  categoria: 'men',
+  precio: 250
+}
 ];
 
-let carro = [];
+const carrito = []
+
+function mostrarProductos(){
+
+const catUsuario = parseInt(prompt('elige tu categoria: \n1 - women \n2 - men \n3 - kids').toLowerCase());
+
+
+const prodElegido = productos.find(p=>p.id === prodUsuario);
+
+
+const existe = carrito.some((p) => p.id === prodUsuario);
+const prodAlCarrito = {
+
+}
+
+if(existe) {
+  carrito.map(p=>{
+    if(p.id === prodUsuario){
+      p.cantidad++
+    }
+  })
+  
+}else{
+  console.log(prodElegido);
+  carrito.push(prodElegido);
+}
+calcularTotal ();
+}
+
+function cacularTotal() {
+  let total = carrito.reduce((acc, el) => (acc += el.precio));
+  alert(total);
+}
+
+
+mostrarProductos();
 
 
 
 
 
-function filtrar() {
+
+
+
+
+
+
+
+
+
+
+
+
+/*let carro = [];
+
+let bag = [];
+ 
+function mostrarProductos(kids) {
+
+  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - laura \n2 - minnie \n3 - batman'));
+
+  console.log(prodUsuario);
+
+  let prodElegido = kids.find((p) => p.id === prodUsuario);
+
+  let existe = bag.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
+
+  let prodAlBag = [{
+    id: prodElegido.id,
+    nombre: prodElegido.nombre,
+    categoria: prodElegidoElegido.categoria,
+    precio: prodElegido.precio,
+    cantidad: prodElegido.cantidad
+    },
+]
+
+let bag = [];*/
+
+
+
+
+
+/*function filtrar() {
 
   let catUsuario = prompt('Que categoria deseas elegir?');
 
@@ -77,69 +169,7 @@ let answer = prompt('Ingresa genero elegido: \n1-Women\n2-Men\n3-Kids');
 
 
 
-function mostrarProductos(women) {
 
-  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - purple \n2 - graffitti \n3 - osiris'));
-
-  console.log(prodUsuario);
-
-  let prodElegido = women.find((p) => p.id === prodUsuario);
-
-  let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
-
-  let prodAlCarrito = [{
-    id: prodElegido.id,
-    nombre: prodElegido.nombre,
-    categoria: prodElegidoElegido.categoria,
-    precio: prodElegido.precio,
-    cantidad: prodElegido.cantidad
-    }
-]
-}
-
-let carrito = [];
-
-function mostrarProductos(men) {
-
-  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - black fire \n2 - multi \n3 - nirvana'));
-
-  console.log(prodUsuario);
-
-  let prodElegido = men.find((p) => p.id === prodUsuario);
-
-  let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
-
-  let prodAlCarrito = [{
-    id: prodElegido.id,
-    nombre: prodElegido.nombre,
-    categoria: prodElegidoElegido.categoria,
-    precio: prodElegido.precio,
-    cantidad: prodElegido.cantidad
-    },
-]
-
-let bag = [];
- 
-function mostrarProductos(kids) {
-
-  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - laura \n2 - minnie \n3 - batman'));
-
-  console.log(prodUsuario);
-
-  let prodElegido = kids.find((p) => p.id === prodUsuario);
-
-  let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
-
-  let prodAlBag = [{
-    id: prodElegido.id,
-    nombre: prodElegido.nombre,
-    categoria: prodElegidoElegido.categoria,
-    precio: prodElegido.precio,
-    cantidad: prodElegido.cantidad
-    },
-]
-
-let bag = [];
 /*
   if (seleccion == 'women') {
     let elegidosWoman = carrito.map
@@ -159,11 +189,4 @@ let bag = [];
 
 //quiere seguir comprando? puedo preg
 
-function cacularTotal() {
-  let total = carrito.reduce((acc, el) => (acc += el.precio));
-  alert(total);
-}
-}
-
-mostrarProductos();
 
