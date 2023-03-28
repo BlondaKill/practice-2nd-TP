@@ -4,7 +4,7 @@ function saludar() {
 }
 saludar();
 
-let arrayDeProductos = [{
+let arrayDeProductosWoman = [{
     id: 1,
     nombre: 'purple',
     categoria: 'woman',
@@ -24,7 +24,29 @@ let arrayDeProductos = [{
   },
 ];
 
-let carrito = [];
+let carro = [];
+
+let arrayDeProductosMen = [{
+  id: 1,
+  nombre: 'purple',
+  categoria: 'woman',
+  precio: 150
+},
+{
+  id: 2,
+  nombre: 'graffitti',
+  categoria: 'woman',
+  precio: 250
+},
+{
+  id: 3,
+  nombre: 'osiris',
+  categoria: 'woman',
+  precio: 250
+},
+];
+
+let carro = [];
 
 
 
@@ -55,13 +77,35 @@ let answer = prompt('Ingresa genero elegido: \n1-Women\n2-Men\n3-Kids');
 
 
 
-function mostrarProductos(woman) {
+function mostrarProductos(women) {
 
   let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - purple \n2 - graffitti \n3 - osiris'));
 
   console.log(prodUsuario);
 
-  let prodElegido = woman.find((p) => p.id === prodUsuario);
+  let prodElegido = women.find((p) => p.id === prodUsuario);
+
+  let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
+
+  let prodAlCarrito = [{
+    id: prodElegido.id,
+    nombre: prodElegido.nombre,
+    categoria: prodElegidoElegido.categoria,
+    precio: prodElegido.precio,
+    cantidad: prodElegido.cantidad
+    }
+]
+}
+
+let carrito = [];
+
+function mostrarProductos(men) {
+
+  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - black fire \n2 - multi \n3 - nirvana'));
+
+  console.log(prodUsuario);
+
+  let prodElegido = men.find((p) => p.id === prodUsuario);
 
   let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
 
@@ -74,9 +118,28 @@ function mostrarProductos(woman) {
     },
 ]
 
-let carrito = [];
+let bag = [];
  
+function mostrarProductos(kids) {
 
+  let prodUsuario = parseInt(prompt('Ingresa modelo del producto: \n1 - laura \n2 - minnie \n3 - batman'));
+
+  console.log(prodUsuario);
+
+  let prodElegido = kids.find((p) => p.id === prodUsuario);
+
+  let existe = carrito.some(p => p.id === prodUsuario); // true si existe el prod o false si no existe
+
+  let prodAlBag = [{
+    id: prodElegido.id,
+    nombre: prodElegido.nombre,
+    categoria: prodElegidoElegido.categoria,
+    precio: prodElegido.precio,
+    cantidad: prodElegido.cantidad
+    },
+]
+
+let bag = [];
 /*
   if (seleccion == 'women') {
     let elegidosWoman = carrito.map
