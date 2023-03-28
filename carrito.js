@@ -104,4 +104,3 @@ function cacularTotal() {
 
 mostrarProductos();
 
-m
