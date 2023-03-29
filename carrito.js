@@ -5,61 +5,15 @@ function saludar() {
 saludar();
 
 const  productos= [
-  {
-    id: 1,
-    nombre: 'purple',
-    categoria: 'woman',
-    precio: 150
-  },
-  {
-    id: 2,
-    nombre: 'graffitti',
-    categoria: 'woman',
-    precio: 250
-  },
-  {
-    id: 3,
-    nombre: 'osiris',
-    categoria: 'woman',
-    precio: 250
-  },
-
-{
-  id: 4,
-  nombre: 'black fire',
-  categoria: 'men',
-  precio: 150
-},
-{
-  id: 5,
-  nombre: 'multi',
-  categoria: 'men',
-  precio: 250
-},
-{
-  id: 6,
-  nombre: 'nirvana',
-  categoria: 'men',
-  precio: 250
-},
-{
-  id: 7,
-  nombre: 'black fire',
-  categoria: 'men',
-  precio: 150
-},
-{
-  id: 8,
-  nombre: 'multi',
-  categoria: 'men',
-  precio: 250
-},
-{
-  id: 9,
-  nombre: 'nirvana',
-  categoria: 'men',
-  precio: 250
-}
+  { id: 1, nombre: 'purple', categoria: 'woman',  precio: 150},
+  { id: 2, nombre: 'graffitti', categoria: 'woman', precio: 250},
+  { id: 3, nombre: 'osiris', categoria: 'woman', precio: 250},
+  { id: 4, nombre: 'black fire', categoria: 'men', precio: 150},
+  { id: 5, nombre: 'multi', categoria: 'men', precio: 250},
+  { id: 6, nombre: 'nirvana', categoria: 'men', precio: 250},
+  { id: 7, nombre: 'laura', categoria: 'kids', precio: 150},
+  { id: 8, nombre: 'mickey mouse', categoria: 'kids', precio: 250},
+  { id: 9, nombre: 'johnny bravo', categoria: 'kids', precio: 250},
 ];
 
 const carrito = []
