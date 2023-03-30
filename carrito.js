@@ -4,29 +4,77 @@ function saludar() {
 }
 saludar();
 
-const  productos= [
-  { id: 1, nombre: 'purple', categoria: 'woman',  precio: 150},
-  { id: 2, nombre: 'graffitti', categoria: 'woman', precio: 250},
-  { id: 3, nombre: 'osiris', categoria: 'woman', precio: 250},
-  { id: 4, nombre: 'black fire', categoria: 'men', precio: 150},
-  { id: 5, nombre: 'multi', categoria: 'men', precio: 250},
-  { id: 6, nombre: 'nirvana', categoria: 'men', precio: 250},
-  { id: 7, nombre: 'laura', categoria: 'kids', precio: 150},
-  { id: 8, nombre: 'mickey mouse', categoria: 'kids', precio: 250},
-  { id: 9, nombre: 'johnny bravo', categoria: 'kids', precio: 250},
+const  sneakers= [
+  { id: 1, nombre: 'purple', categoria: 'w',  precio: 150},
+  { id: 2, nombre: 'graffitti', categoria: 'w', precio: 250},
+  { id: 3, nombre: 'osiris', categoria: 'w', precio: 250},
+  { id: 4, nombre: 'black fire', categoria: 'm', precio: 150},
+  { id: 5, nombre: 'multi', categoria: 'm', precio: 250},
+  { id: 6, nombre: 'nirvana', categoria: 'm', precio: 250},
+  { id: 7, nombre: 'laura', categoria: 'k', precio: 200},
+  { id: 8, nombre: 'mickey mouse', categoria: 'k', precio: 250},
+  { id: 9, nombre: 'johnny bravo', categoria: 'k', precio: 250},
 ];
 
 const carrito = []
 
-function mostrarProductos(){
 
-const catUsuario = parseInt(prompt('elige tu categoria: \n1 - women \n2 - men \n3 - kids').toLowerCase());
-
-
-const prodElegido = productos.find(p=>p.id === prodUsuario);
+const catUsuario = parseInt(prompt('elige la categoria de tu modelo: \n1 - women \n2 - men \n3 - kids').toLowerCase());
 
 
-const existe = carrito.some((p) => p.id === prodUsuario);
+const catSneakers = sneakers.filter((sneakers) => sneakers.categoriaW);
+console.log(catSneakers);
+
+while (catUsuario == '1') {
+  let answer = prompt('modelos women: \n1 - purple \n2 - graffitti \n3 - osiris');
+  if(answer == '1'){
+    alert('elegiste el modelo purple');
+} else if (answer == '2'){
+  alert('elegiste el modelo graffitti');
+} else if (answer == '3'){
+  alert('elegiste el modelo osiris');  
+} else {
+  alert('categoria inexitente');
+}
+}
+
+while (catUsuario == '2') {
+  let answer = prompt('modelos men: \n4 - black fire \n4 - multi \n5 - nirvana');
+  if(answer == '4'){
+    alert('elegiste el modelo black fire');
+} else if (answer == '5'){
+  alert('elegiste el modelo multi');
+} else if (answer == '6'){
+  alert('elegiste el modelo nirvana');  
+} else {
+  alert('categoria inexitente');
+}
+}
+
+while (catUsuario == '3') {
+  let answer = prompt('modelos kids: \n7 - laura \n8 - mickey mouse \n9 - johnny bravo');
+  if(answer == '7'){
+    alert('elegiste el modelo laura');
+} else if (answer == '8'){
+  alert('elegiste el modelo mickey mouse');
+} else if (answer == '9'){
+  alert('elegiste el modelo johnny bravo');  
+} else {
+  alert('categoria inexitente');
+}
+}
+
+
+
+
+
+//const result = word.filter(word === men);
+
+
+//const prodElegido = productos.find(p=>p.id === prodUsuario);
+
+
+/*const existe = carrito.some((p) => p.id === prodUsuario);
 const prodAlCarrito = {
 
 }
@@ -49,6 +97,7 @@ function cacularTotal() {
   let total = carrito.reduce((acc, el) => (acc += el.precio));
   alert(total);
 }
+
 
 
 mostrarProductos();
