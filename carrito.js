@@ -21,8 +21,55 @@ const carrito = []
 
 const catUsuario = parseInt(prompt('elige la categoria de tu modelo: \n1 - women \n2 - men \n3 - kids').toLowerCase());
 
+const buscarCategoria = (catUsuario) => { 
+  
+  switch(catUsuario) {
+    case 1: 
+    return 'w';
+    case 2:
+      return 'm';
+      case 3:
+        return 'k';
 
-const catSneakers = sneakers.filter((sneakers) => sneakers.categoriaW);
+  }
+}
+
+const categoria = buscarCategoria(catUsuario) // devuelve a q categoria corresp
+
+const productosFiltrados = sneakers.filter(sneakers => sneakers.categoria === categoria)
+console.log(productosFiltrados)
+
+let mensaje = ''
+    
+productosFiltrados.forEach(s => {
+    mensaje += 
+    `${s.id} - ${s.nombre}\n`
+
+})
+console.log(mensaje);
+
+const idProducto = parseInt(prompt('Ingresa el modelo a comprar \n' + mensaje));
+
+const producto = sneakers.find(s => s.id === idProducto)
+
+if(producto) {
+  alert('elegiste ' + producto.nombre)
+} else {
+  alert('Producto inexistente')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*const catSneakers = sneakers.filter((sneakers) => sneakers.categoriaW);
 console.log(catSneakers);
 
 while (catUsuario == '1') {
@@ -35,6 +82,7 @@ while (catUsuario == '1') {
   alert('elegiste el modelo osiris');  
 } else {
   alert('categoria inexitente');
+  alert()
 }
 }
 
@@ -61,9 +109,10 @@ while (catUsuario == '3') {
   alert('elegiste el modelo johnny bravo');  
 } else {
   alert('categoria inexitente');
-}
-}
 
+}
+}
+const catUsuario2 = prompt('queres cambiar de genero')
 
 
 
