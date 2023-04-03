@@ -26,12 +26,15 @@ const buscarCategoria = (catUsuario) => {
   switch(catUsuario) {
     case 1: 
     return 'w';
+    
 
     case 2:
     return 'm';
+    
 
     case 3:
     return 'k';
+    
   }
 }
 
@@ -59,23 +62,24 @@ const producto = sneakers.find(s => s.id === idProducto)
 if(producto) {
   alert('elegiste modelo ' + producto.nombre  +  ' $ ' + producto.precio)
 } else {
-  alert('Producto inexistente \n\n↩️ b (para volver al menu)')
+  alert('Producto inexistente')
 }
 
-/*let total = 0
+let total = 0
+
 while (sneakers != 'b'){
   switch (sneakers){
-    case 'producto.precio == 250':
-      alert('agregaste al carrito : $250');
-      sumatoriaCompra (250);
+    case '1, 4, 8':
+      alert('agregaste al carrito : $150');
+      sumatoriaCompra (150);
       break;
 
-    case 'producto.precio == $150':
-      alert('agregaste al carrito $150');
-      sumatoriaCompra(150);
+    case '3, 5, 6, 9':
+      alert('agregaste al carrito $250');
+      sumatoriaCompra(250);
       break;
 
-    case 'producto.precio == 300':
+    case '2, 7':
         alert('agregaste al carrito $300');
         sumatoriaCompra(300);
         break;
@@ -88,7 +92,7 @@ while (sneakers != 'b'){
 
 
 }
-alert('Total de su compra $' + total)*/
+alert('Total de su compra $' + total)
 
 
 
