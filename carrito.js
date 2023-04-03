@@ -6,31 +6,32 @@ saludar();
 
 const  sneakers= [
   { id: 1, nombre: 'purple', categoria: 'w',  precio: 150},
-  { id: 2, nombre: 'graffitti', categoria: 'w', precio: 250},
+  { id: 2, nombre: 'graffitti', categoria: 'w', precio: 300},
   { id: 3, nombre: 'osiris', categoria: 'w', precio: 250},
   { id: 4, nombre: 'black fire', categoria: 'm', precio: 150},
   { id: 5, nombre: 'multi', categoria: 'm', precio: 250},
   { id: 6, nombre: 'nirvana', categoria: 'm', precio: 250},
-  { id: 7, nombre: 'laura', categoria: 'k', precio: 200},
-  { id: 8, nombre: 'mickey mouse', categoria: 'k', precio: 250},
+  { id: 7, nombre: 'laura', categoria: 'k', precio: 300},
+  { id: 8, nombre: 'mickey mouse', categoria: 'k', precio: 150},
   { id: 9, nombre: 'johnny bravo', categoria: 'k', precio: 250},
 ];
 
 const carrito = []
 
 
-const catUsuario = parseInt(prompt('elige la categoria de tu modelo: \n1 - women \n2 - men \n3 - kids').toLowerCase());
+const catUsuario = parseInt(prompt('elige la categoria de tu modelo: \n\n1 - women \n2 - men \n3 - kids').toLowerCase());
 
 const buscarCategoria = (catUsuario) => { 
   
   switch(catUsuario) {
     case 1: 
     return 'w';
-    case 2:
-      return 'm';
-      case 3:
-        return 'k';
 
+    case 2:
+    return 'm';
+
+    case 3:
+    return 'k';
   }
 }
 
@@ -48,19 +49,71 @@ productosFiltrados.forEach(s => {
 })
 console.log(mensaje);
 
-const idProducto = parseInt(prompt('Ingresa el modelo a comprar \n' + mensaje));
+const idProducto = parseInt(prompt('Ingresa el modelo a comprar \n\n' + mensaje + '\n\n↩️ b (para volver al menu)'));
 
 const producto = sneakers.find(s => s.id === idProducto)
 
+
+
+
 if(producto) {
-  alert('elegiste ' + producto.nombre)
+  alert('elegiste modelo ' + producto.nombre  +  ' $ ' + producto.precio)
 } else {
-  alert('Producto inexistente')
+  alert('Producto inexistente \n\n↩️ b (para volver al menu)')
 }
 
+/*let total = 0
+while (sneakers != 'b'){
+  switch (sneakers){
+    case 'producto.precio == 250':
+      alert('agregaste al carrito : $250');
+      sumatoriaCompra (250);
+      break;
+
+    case 'producto.precio == $150':
+      alert('agregaste al carrito $150');
+      sumatoriaCompra(150);
+      break;
+
+    case 'producto.precio == 300':
+        alert('agregaste al carrito $300');
+        sumatoriaCompra(300);
+        break;
+
+    default:
+      alert('precio inexistente');
+      break;   
+  }
+  sneakers = parseInt(prompt('Ingresa el modelo a comprar \n\n' + mensaje + '\n\n↩️ b (para volver al menu)'));
+
+
+}
+alert('Total de su compra $' + total)*/
 
 
 
+//{}
+//function sumatoriaTotal(precio) {
+  //total = total + precio;
+//  alert('llevas gastado $ ' + total);
+
+
+
+
+/*if (id.producto == 'women'){
+  let elegidosWoman = carrito.map
+  (p => {
+    if (p.id === prodUsuario) {
+      p.cantidad++;
+      p.precio = p.cantidad * prodAlCarrito.precio;
+    }
+  })
+} else {
+  carrito.push(prodAlCarrito);
+  console.log(prodElegido);
+
+}
+calcularTotal();*/
 
 
 
@@ -215,30 +268,15 @@ let answer = prompt('Ingresa genero elegido: \n1-Women\n2-Men\n3-Kids');
     } else if(answer != '1, 2, 3')
         alert('Genero inexistente');
     
-    question = prompt('Deseas cambiar el genero? \n- y/yes\n- n/no');
+    question = prompt('Deseas cambiar el genero? \n- y/yes\n- n/no');*/
 
      
 
 
 
 
-/*
-  if (seleccion == 'women') {
-    let elegidosWoman = carrito.map
-    (p => {
-      if (p.id === prodUsuario) {
-        p.cantidad++;
-        p.precio = p.cantidad * prodAlCarrito.precio;
-      }
-    })
-  } else {
-    carrito.push(prodAlCarrito);
-    console.log(prodElegido);
 
-  }
-  calcularTotal();
-}*/
+  
 
-//quiere seguir comprando? puedo preg
 
 
