@@ -56,7 +56,7 @@ const idProducto = parseInt(prompt('Ingresa el modelo a comprar \n\n' + mensaje 
 const producto = sneakers.find(s => s.id === idProducto)
 
 
-
+let total = 0;
 
 if(sneakers) {
   alert('elegiste modelo ' + producto.nombre  +  ' $ ' + producto.precio)
@@ -75,14 +75,25 @@ if(sneakers) {
       default:
       break;
   }
-  
-  question = prompt('Deseas seguir comprando? \n - y / yes\n - n / no');
-  while (question == 'n'){
-    alert('Gracias por tu compra!')
-    break;
-  }
-}
 
-const total = s.id.reduce((acc, el)=> acc + el.precio, 0);
+  question = prompt('Deseas seguir comprando? \n - y / yes\n - n / no');
+
+  while (question == 'n'){
+    let answer = ('Gracias por tu compra!');
+    break;
+    }   
+}
+  
+alert('El total de tu compra es $' + total);
+   // if (question == 'y') {
+    //  alert (prompt('Ingresa el modelo a comprar \n\n' + mensaje + '\n\n↩️ b (para volver al menu'));
+      
+//}
+
+
+
+
+
+
 
 
