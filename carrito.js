@@ -85,7 +85,10 @@ if(sneakers) {
 }
   
 alert('El total de tu compra es $' + total);
-   // if (question == 'y') {
+   
+
+
+// if (question == 'y') {
     //  alert (prompt('Ingresa el modelo a comprar \n\n' + mensaje + '\n\n↩️ b (para volver al menu'));
       
 //}
