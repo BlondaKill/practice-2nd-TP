@@ -71,59 +71,18 @@ if(sneakers) {
       case 's.id === 7, 2':
       sumatoriaCompra (300);
       break;
+      
       default:
       break;
   }
-  question = prompt('Deseas cambiar de categoria? \n - y / yes\n - n / no');
-} 
-
-/*while (question == 'y'){
-  let answer = prompt('elige la categoria de tu modelo: \n\n1 - women \n2 - men \n3 - kids');
-
-  if (answer == '1'){
-    alert ('Elegiste categoria women');
   
-  } else if( answer == '2'){
-    alert('Elegiste categoria men');
-
-  } else if(answer == 3){
-    alert('Elegiste categoria kids');
-
-  } else if(answer != '1,2,3'){
-    alert(prompt('Ingresa el modelo a comprar:' + mensaje + '\n\n↩️ b (para volver al menu)'))
+  question = prompt('Deseas seguir comprando? \n - y / yes\n - n / no');
+  while (question == 'n'){
+    alert('Gracias por tu compra!')
+    break;
   }
-}*/
-
-
-
-
-
-while (sneakers != 'b'){
-  switch (sneakers){
-    case '1, 4, 8':
-      alert('agregaste al carrito : $150');
-      sumatoriaCompra (150);
-      break;
-
-    case '3, 5, 6, 9':
-      alert('agregaste al carrito $250');
-      sumatoriaCompra(250);
-      break;
-
-    case '2, 7':
-        alert('agregaste al carrito $300');
-        sumatoriaCompra(300);
-        break;
-
-    default:
-      alert('precio inexistente');
-      break;   
-  }
-  sneakers = parseInt(prompt('Ingresa el modelo a comprar \n\n' + mensaje + '\n\n↩️ b (para volver al menu)'));
-
-
 }
-alert('Total de su compra $' + total)
 
+const total = s.id.reduce((acc, el)=> acc + el.precio, 0);
 
 
