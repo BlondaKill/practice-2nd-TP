@@ -124,7 +124,7 @@ if (sneakers) {
   question = prompt('Deseas seguir comprando? \n - y / yes\n - n / no');
 
   while (question == 'n') {
-    let answer = ('Gracias por tu compra!');
+    alert ('Gracias por tu compra!');
     break;
   }
 }
